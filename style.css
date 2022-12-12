@@ -1,0 +1,46 @@
+body{
+	font-family: sans-serif;
+}
+
+.accordian{
+	width: 100%;
+}
+
+.acctitle{
+	background: #777;
+	color: #fff;
+	font-size: 14px;
+	padding: 15px;
+	cursor: pointer;
+	user-select: none;
+	position: relative;
+}
+
+.acctitle::after{
+	content:'\f067';
+	font-family:'Font Awesome 5 Free';
+	position: absolute;
+	right: 15px;
+	top: 35%;
+	transform: translate(-50%);
+}
+
+.active::after{
+	content: '\f068';
+}
+
+.acctitle:hover,.active{
+	background: steelblue;
+}
+
+.accontent{
+	height: 0;
+	background: #f4f4f4;
+	text-indent:50px;
+	text-align: justify;
+	font-size: 14px;
+	padding: 0 20px;
+	overflow: hidden;
+	transition:height .5s ease-in-out;
+}
+
